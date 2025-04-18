@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+}
+
+.globe-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-0%, -0%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.globe {
+  width: 700px;
+  height: 700px;
+  opacity: 0.1;
+  animation: spin 20s linear infinite;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.globe-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #53c0c8;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.language-select select {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search-box {
+  margin-top: 20px;
+  position: relative;
+}
+
+.search-box input {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box input:focus {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.quick-links {
+  margin-top: 40px;
+}
+
+.quick-links h2 {
+  font-size: 1.5rem;
+}
+
+.links a {
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 14px;
+  color: #555;
+}
+
+body.dark-theme {
+  background: linear-gradient(135deg, #2c3e50 0%, #bdc3c7 100%);
+}
+
+body.dark-theme .search-box input {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+body.dark-theme footer,
+body.dark-theme .logo,
+body.dark-theme .links a,
+body.dark-theme .hero p,
+body.dark-theme .hero h1,
+body.dark-theme .quick-links h2 {
+  color: #ecf0f1;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
